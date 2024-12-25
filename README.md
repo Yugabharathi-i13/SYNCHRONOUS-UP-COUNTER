@@ -28,19 +28,48 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
-
+ 1.Type the program in Quartus software.
+ 
+ 2.Compile and run the program. 
+ 
+ 3.Generate the RTL schematic and save the logic diagram.
+ 
+ 4.Create nodes for inputs and outputs to generate the timing diagram. 
+ 
+ 5.For different input combinations generate the timing diagram.
+ 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Program for flipflops and verify its truth table in quartus using Verilog programming. 
+~~~
+ module exp11(out,clk,rstn);
+ input clk,rstn;
+ output reg [3:0]out;
+ always @(posedge clk)
+ begin
+ if(!rstn)
+ out<=0;
+ else
+ out <= out+1;
+ end
+ endmodule
+~~~
 
-Developed by: RegisterNumber:
-*/
+Developed by: Yugabharathi.T RegisterNumber:24900006
 
 **RTL LOGIC UP COUNTER**
 
+![392217643-def6b99e-094b-480e-a0a7-790ed62a9180](https://github.com/user-attachments/assets/52e38e22-736c-4414-9eb4-307d33143f48)
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![Screenshot 2024-12-25 170119](https://github.com/user-attachments/assets/94598fdb-4661-4737-bc70-490628cc77df)
+
 
 **TRUTH TABLE**
 
+![392217731-003ea65e-7a92-4b8f-bae2-d52903ec2603](https://github.com/user-attachments/assets/930e9c4a-4ba1-4992-82e4-ede4926d8d86)
+
 **RESULTS**
+
+Thus the SISO shift register is implemented and its functionality is validated in Quartus using Verilog Programming.
